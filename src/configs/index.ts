@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import shiftReg from './1_shift_reg.ini?raw';
-import configB from './config_b.ini?raw';
-import configC from './config_c.ini?raw';
+import bcd from './2_bcd.ini?raw';
+import sums from './3_sums.ini?raw';
 
 export interface IBoardConfig {
   id: string;
@@ -11,7 +11,6 @@ export interface IBoardConfig {
   content: string;
 }
 
-// TODO: configs B and C are placeholders until the real ones are supplied.
 export const configs: IBoardConfig[] = [
   {
     id: 'shift_reg',
@@ -19,6 +18,17 @@ export const configs: IBoardConfig[] = [
     description: 'wokwi_shift_register_801 (ttsky25b #266), 3 Hz clock, manual inputs',
     content: shiftReg,
   },
-  { id: 'b', name: 'Config B', description: 'Loads tt_um_loopback by default', content: configB },
-  { id: 'c', name: 'Config C', description: 'Loads tt_um_vga_clock by default', content: configC },
+  {
+    id: 'bcd',
+    name: '2 - binary to decimal',
+    description:
+      'wokwi_tiny_tapeout_project_binary_to_decimal_display_265 (ttsky25b #166), manual inputs',
+    content: bcd,
+  },
+  {
+    id: 'sums',
+    name: '3 - single digit sums',
+    description: 'wokwi_single_digit_sums_by_mark_angelov_697 (ttsky25b #42), manual inputs',
+    content: sums,
+  },
 ];
