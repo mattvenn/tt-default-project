@@ -15,8 +15,8 @@ export interface IBoardConfig {
 export const configs: IBoardConfig[] = [
   {
     id: 'shift_reg',
-    name: 'Shift register',
-    description: 'tt_um_wokwi_shift_register_801, 1 Hz clock, manual inputs',
+    name: '1 - shift register',
+    description: 'wokwi_shift_register_801 (ttsky25b #266), 3 Hz clock, manual inputs',
     content: shiftReg,
   },
   { id: 'b', name: 'Config B', description: 'Loads tt_um_loopback by default', content: configB },
